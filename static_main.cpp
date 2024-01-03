@@ -19,8 +19,8 @@ public:
 */
 int main()
 {
-    // f();
-    // cout << var << endl;
+    f();
+    cout << var << endl;
     Base::f();
     cout << Base::base_var << endl;
     return 0;

@@ -19,11 +19,11 @@ int main()
 
     int &const d = a;
 
-    int &f = e;
-
     const int &e = a;
     e = 3;
     cout << a << endl;
+
+    int &f = e;
 }
 
 // can we rewrite pp.cpp into reference to pointer form without if-else conditionals?

@@ -44,7 +44,7 @@ int f_dd(int a, int b, int c = 0);
 
 int main()
 {
-    fd(1);
+    f(1);
     // Q2
     // f(NULL);
     // f(nullptr);
