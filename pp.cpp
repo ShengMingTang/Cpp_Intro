@@ -9,6 +9,7 @@ struct list
     struct list *next; // can we just declare list *next;
 };
 
+// think about which "object" you are modifying
 list *insert_sorted(list *head, int val)
 {
     list **pp = &head;

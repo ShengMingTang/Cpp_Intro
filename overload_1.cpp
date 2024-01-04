@@ -21,7 +21,7 @@ int main()
 {
     A a = {.data = 1, .temp = 2};
     A b = {.data = 3, .temp = 4};
-    A c = a + b;
-    cout << a << b << c << endl;
+    A c = a + b; // A + A
+    ((cout << a) << b) << c << endl;
     return 0;
 }

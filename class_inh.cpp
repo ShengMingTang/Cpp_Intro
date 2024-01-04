@@ -13,7 +13,7 @@ private:
     void prt_f() {cout << "prt_base" << endl;}
 };
 
-class Derived: public Base
+class Derived: public Base // protected Base
 {
 public:
     Derived(): Base() {cout << "constr_derived" << endl;}

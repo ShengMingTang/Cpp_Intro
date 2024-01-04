@@ -10,6 +10,6 @@ int main()
 
     int &ra = a;
 
-    int & * pra = ra;
+    // int & * pra = ra;
     return 0;
 }

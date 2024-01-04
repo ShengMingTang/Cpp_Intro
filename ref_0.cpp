@@ -9,21 +9,22 @@ int main()
 {
     int a = 1;
     
-    int &b = 2;
+    // int &b = 2;
 
-    int &bb;
+    // int &bb;
     
     int &c = a;
     c = 3;
     cout << a << endl;
 
-    int &const d = a;
+    // int & const d = a;
+    // d = 4;
 
     const int &e = a;
-    e = 3;
-    cout << a << endl;
+    // e = 3;
+    cout << e << endl;
 
-    int &f = e;
+    int &f = e; // = a
 }
 
 // can we rewrite pp.cpp into reference to pointer form without if-else conditionals?

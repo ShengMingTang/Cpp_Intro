@@ -16,7 +16,7 @@ public:
         // This member function intends to "decorate" the base class
         // do things written in the derived first then the base
         cout << "derived-f" << endl;
-        f();
+        Base::f();
     }
 };
 
@@ -29,5 +29,8 @@ int main()
     b.f();
     Derived d;
     d.f();
+
+    // Base *pd = &d;
+    // pd->f();
     return 0;
 }

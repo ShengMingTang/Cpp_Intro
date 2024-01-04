@@ -12,10 +12,10 @@ int f(int a, int b)
     return a + b;
 }
 
-int64_t f(int a, int b)
-{
-    return a + b;
-}
+// int64_t f(int a, int b)
+// {
+//     return a + b;
+// }
 
 int f(int *a)
 {
@@ -41,13 +41,18 @@ int f_dd(int a, int b, int c = 0);
     ...
  }
 */
+int f_dd(int a, int b, int c)
+{
+    cout << "fdd" << endl;
+}
 
 int main()
 {
-    f(1);
+    // f(1);
     // Q2
+    // *ptr = NULL;
     // f(NULL);
-    // f(nullptr);
+    f(nullptr); // 0
     return 0;
 }
 

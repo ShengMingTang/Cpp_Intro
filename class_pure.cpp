@@ -12,16 +12,16 @@ class Derived: public Base
 {
 public:
     Derived(): Base() {}
-    // void f() override
-    // {
-    //     cout << "derived-f" << endl;
-    // }
+    void f() override
+    {
+        cout << "derived-f" << endl;
+    }
 };
 
-// void func(Base *b)
-// {
-//     b->f();
-// }
+void func(Base *b)
+{
+    b->f();
+}
 
 /*
 1. Can the code be compiled ?
@@ -31,10 +31,10 @@ public:
 
 int main()
 {
-    Base a;
+    // Base a;
     Derived d;
     Base *pd = &d;
     pd->f();
-    // func(pd);
+    func(pd);
     return 0;
 }
