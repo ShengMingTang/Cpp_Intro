@@ -23,17 +23,19 @@ public: // accessed in any context
     Base(string _a): a(_a) {
         cout << a << "-constructed" << endl;
     }
-    Base(const Base& oth) {
+    Base(const Base& oth) { // left value reference, occupies space
         a = oth.a;
+        // for(int ) // costly
         cout << a << "-copy" << endl;
     }
-    Base(Base&& oth) {
+    Base(Base&& oth) { // right value reference
         a = oth.a;
+        swap(p, oth.p);
         cout << a << "-move" << endl;
     }
     ~Base() {
         cout << a << "-destructed "<< endl;
-        // delete
+        delete p;
     }
     void dummy() const {}
     // these are two different function signatures / definition
@@ -55,6 +57,7 @@ protected: // access in the class itself and derived class, friend class
     string protected_a; 
 private: // accessed in the class itself only
     string a;
+    int *p; // p[100]
     friend class B;
 };
 
@@ -71,6 +74,8 @@ Base create_arg(Base b)
 1. can the class be compiled
 2. constructor ouputs
 3. function call outputs
+
+c = (a + b);
 */
 
 int main()
@@ -81,6 +86,10 @@ int main()
     const Base b("b");
     // Base c(create()); // c is constructed from Base("create") directly
     Base d(create_arg(Base("arg"))); // try comment out move
+
+    Base c("c");
+    Base cc(create_arg(c)); // try comment out move
+
     cout << "===================" << endl;
     a.f();
     b.f();
